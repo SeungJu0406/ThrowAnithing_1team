@@ -17,7 +17,7 @@ public class MobSpawnTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == Tag.Player)
         {
-
+            monsterPrefabs.SetActive(true);
         }
 
     }
