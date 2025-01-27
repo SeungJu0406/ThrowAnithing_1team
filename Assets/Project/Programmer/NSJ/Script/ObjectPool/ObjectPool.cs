@@ -52,8 +52,7 @@ public class ObjectPool : MonoBehaviour
     }
     #region GetPool
     public static GameObject GetPool(GameObject prefab)
-    {
-        CreateObjectPool();
+    {     
         PoolInfo info = FindPool(prefab);
         if (info.Pool.Count > 0)
         {
@@ -73,7 +72,6 @@ public class ObjectPool : MonoBehaviour
     }
     public static GameObject GetPool(GameObject prefab, Transform transform)
     {
-        CreateObjectPool();
         PoolInfo info = FindPool(prefab);
         if (info.Pool.Count > 0)
         {
@@ -95,7 +93,6 @@ public class ObjectPool : MonoBehaviour
     }
     public static GameObject GetPool(GameObject prefab, Transform transform, bool worldPositionStay)
     {
-        CreateObjectPool();
         PoolInfo info = FindPool(prefab);
         if (info.Pool.Count > 0)
         {
@@ -124,7 +121,6 @@ public class ObjectPool : MonoBehaviour
     }
     public static GameObject GetPool(GameObject prefab, Vector3 pos, Quaternion rot)
     {
-        CreateObjectPool();
         PoolInfo info = FindPool(prefab);
         if (info.Pool.Count > 0)
         {
@@ -144,7 +140,6 @@ public class ObjectPool : MonoBehaviour
     }
     public static T GetPool<T>(T prefab) where T : Component
     {
-        CreateObjectPool();
         PoolInfo info = FindPool(prefab.gameObject);
         if (info.Pool.Count > 0)
         {
@@ -166,7 +161,6 @@ public class ObjectPool : MonoBehaviour
     }
     public static T GetPool<T>(T prefab, Transform transform) where T : Component
     {
-        CreateObjectPool();
         PoolInfo info = FindPool(prefab.gameObject);
         if (info.Pool.Count > 0)
         {
@@ -190,7 +184,6 @@ public class ObjectPool : MonoBehaviour
     }
     public static T GetPool<T>(T prefab, Transform transform, bool worldPositionStay) where T : Component
     {
-        CreateObjectPool();
         PoolInfo info = FindPool(prefab.gameObject);
         if (info.Pool.Count > 0)
         {
@@ -220,7 +213,6 @@ public class ObjectPool : MonoBehaviour
     }
     public static T GetPool<T>(T prefab, Vector3 pos, Quaternion rot) where T : Component
     {
-        CreateObjectPool();
         PoolInfo info = FindPool(prefab.gameObject);
         if (info.Pool.Count > 0)
         {
@@ -242,7 +234,6 @@ public class ObjectPool : MonoBehaviour
     }
     public static GameObject GetPool(GameObject prefab, float returnDelay)
     {
-        CreateObjectPool();
         GameObject instance = null;
         PoolInfo info = FindPool(prefab);
         if (info.Pool.Count > 0)
@@ -263,7 +254,6 @@ public class ObjectPool : MonoBehaviour
     }
     public static GameObject GetPool(GameObject prefab, Transform transform, float returnDelay)
     {
-        CreateObjectPool();
         GameObject instance = null;
         PoolInfo info = FindPool(prefab);
         if (info.Pool.Count > 0)
@@ -286,7 +276,6 @@ public class ObjectPool : MonoBehaviour
     }
     public static GameObject GetPool(GameObject prefab, Transform transform, bool worldPositionStay, float returnDelay)
     {
-        CreateObjectPool();
         GameObject instance = null;
         PoolInfo info = FindPool(prefab);
         if (info.Pool.Count > 0)
@@ -315,7 +304,6 @@ public class ObjectPool : MonoBehaviour
     }
     public static GameObject GetPool(GameObject prefab, Vector3 pos, Quaternion rot, float returnDelay)
     {
-        CreateObjectPool();
         GameObject instance = null;
         PoolInfo info = FindPool(prefab);
         if (info.Pool.Count > 0)
@@ -336,7 +324,6 @@ public class ObjectPool : MonoBehaviour
     }
     public static T GetPool<T>(T prefab, float returnDelay) where T : Component
     {
-        CreateObjectPool();
         T component = null;
         PoolInfo info = FindPool(prefab.gameObject);
         if (info.Pool.Count > 0)
@@ -359,7 +346,6 @@ public class ObjectPool : MonoBehaviour
     }
     public static T GetPool<T>(T prefab, Transform transform, float returnDelay) where T : Component
     {
-        CreateObjectPool();
         T component = null;
         PoolInfo info = FindPool(prefab.gameObject);
         if (info.Pool.Count > 0)
@@ -385,7 +371,6 @@ public class ObjectPool : MonoBehaviour
     }
     public static T GetPool<T>(T prefab, Transform transform, bool worldPositionStay, float returnDelay) where T : Component
     {
-        CreateObjectPool();
         T component = null;
         PoolInfo info = FindPool(prefab.gameObject);
         if (info.Pool.Count > 0)
@@ -416,7 +401,6 @@ public class ObjectPool : MonoBehaviour
     }
     public static T GetPool<T>(T prefab, Vector3 pos, Quaternion rot, float returnDelay) where T : Component
     {
-        CreateObjectPool();
         T component = null;
         PoolInfo info = FindPool(prefab.gameObject);
         if (info.Pool.Count > 0)
@@ -600,6 +584,7 @@ public class ObjectPool : MonoBehaviour
     #endregion
     private static PoolInfo FindPool(GameObject poolPrefab)
     {
+        CreateObjectPool();
         PoolInfo pool = default;
         if (_poolDic.ContainsKey(poolPrefab) == false)
         {
