@@ -158,7 +158,6 @@ public class PlayerCameraHold : MonoBehaviour
         {
             if (_target.transform != null)
             {
-                //if (Vector3.Distance(_player.transform.position, _target.transform.position) > _detectRange)
                 if ((_player.transform.position - _target.transform.position).sqrMagnitude > Mathf.Pow(_detectRange, 2))
                 {
                     gameObject.SetActive(false);
