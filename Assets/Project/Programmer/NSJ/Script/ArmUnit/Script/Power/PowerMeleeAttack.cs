@@ -204,7 +204,11 @@ public class PowerMeleeAttack : ArmMeleeAttack
             destination.y = 0;
 
             Vector3 targetDir = (destination - source).normalized;
-            float targetAngle = Vector3.Angle(transform.forward, targetDir); // 아크코사인 필요 (느리다)
+            //float targetAngle = Vector3.Angle(transform.forward, targetDir); // 아크코사인 필요 (느리다)
+            //float targetAngle = Vector3.Dot(transform.forward, targetDir);
+            float targetAngle = transform.forward.x * targetDir.x + transform.forward.y * targetDir.y + transform.forward.z * targetDir.z;
+            targetAngle = Mathf.Acos(targetAngle) * Mathf.Rad2Deg;
+         
             if (targetAngle > _charges[_index].AttackAngle * 0.5f)
                 continue;
 

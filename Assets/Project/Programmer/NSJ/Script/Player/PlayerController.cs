@@ -972,7 +972,7 @@ public class PlayerController : MonoBehaviour, IHit, IHeal
         {
             targetRb.transform.Translate(knockBackDir * Time.deltaTime * 30f, Space.World);
 
-            if (Vector3.Distance(originPos, targetRb.position) > knockbackDistance)
+            if ((originPos - targetRb.position).sqrMagnitude > Mathf.Pow(knockbackDistance,2))
             {
                 break;
             }

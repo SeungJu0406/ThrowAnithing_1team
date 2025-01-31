@@ -1,15 +1,11 @@
-using BehaviorDesigner.Runtime.Tasks.Unity.UnityAnimator;
-using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using Zenject.SpaceFighter;
 
 public class PlayerCameraHold : MonoBehaviour
 {
     [SerializeField] GameObject _targetEffect;
-    [Range(0,360)][SerializeField] float _angle;
+    [Range(0, 360)][SerializeField] float _angle;
     [SerializeField] float _detectRange;
     private PlayerController _player;
 
@@ -26,7 +22,7 @@ public class PlayerCameraHold : MonoBehaviour
     }
 
     [SerializeField] private List<TargetInfo> _targetList = new List<TargetInfo>();
-    [SerializeField]private TargetInfo _target;
+    [SerializeField] private TargetInfo _target;
     private void Awake()
     {
         _player = GetComponentInParent<PlayerController>();
@@ -48,12 +44,12 @@ public class PlayerCameraHold : MonoBehaviour
 
     private void OnDisable()
     {
-        if(_checkDistanceToTarget != null)
+        if (_checkDistanceToTarget != null)
         {
             StopCoroutine(_checkDistanceToTarget);
             _checkDistanceToTarget = null;
         }
-        if(_changeTargetRoutine != null)
+        if (_changeTargetRoutine != null)
         {
             StopCoroutine(_changeTargetRoutine);
             _changeTargetRoutine = null;
@@ -83,7 +79,7 @@ public class PlayerCameraHold : MonoBehaviour
             // 플레이어의 타겟 지점을 지정한 타겟위치로 지정
             _player.TargetPos = _target.transform.position;
             // 타겟 이펙트효과 타겟위치
-            _targetEffect.transform.position = new(_target.transform.position.x, _target.transform.position. y + 0.3f, _target.transform.position.z);
+            _targetEffect.transform.position = new(_target.transform.position.x, _target.transform.position.y + 0.3f, _target.transform.position.z);
         }
 
     }
@@ -95,7 +91,7 @@ public class PlayerCameraHold : MonoBehaviour
     {
         // 플레이어가 앞을 바라봄
         //Player.LookAtCameraFoward();
-        
+
         // 주변에 몬스터가 있는지 스캔
         int hitCount = Physics.OverlapSphereNonAlloc(transform.position, _detectRange, _player.OverLapColliders, 1 << Layer.Monster);
         for (int i = 0; i < hitCount; i++)
@@ -109,12 +105,14 @@ public class PlayerCameraHold : MonoBehaviour
 
             Vector3 targetDir = (destination - source).normalized;
 
-            float targetAngle = Vector3.Angle(_player.CamareArm.forward, targetDir); // 아크코사인 필요 (느리다)
+            //float targetAngle = Vector3.Angle(_player.CamareArm.forward, targetDir); // 아크코사인 필요 (느리다)
+            float targetAngle = Vector3.Dot(_player.CamareArm.forward, targetDir);
+            targetAngle = Mathf.Acos(targetAngle) * Mathf.Rad2Deg;
             if (targetAngle > _angle * 0.5f)
                 continue;
 
             // 조건에 부합하면 해당 타겟을 거리와 함께 저장
-            TargetInfo targetInfo = SetTargetInfo(targetTransform, _player.OverLapColliders[i], Vector3.Distance(transform.position, targetTransform.position));
+            TargetInfo targetInfo = SetTargetInfo(targetTransform, _player.OverLapColliders[i], (targetTransform.position - transform.position).sqrMagnitude);
             _targetList.Add(targetInfo);
         }
         // 스캔에 실패했다면 바로 꺼짐
@@ -141,7 +139,7 @@ public class PlayerCameraHold : MonoBehaviour
     }
 
     //TargetInfo 설정
-    private TargetInfo SetTargetInfo(Transform target, Collider collider,float distance)
+    private TargetInfo SetTargetInfo(Transform target, Collider collider, float distance)
     {
         TargetInfo info = new TargetInfo();
         info.transform = target;
@@ -150,17 +148,18 @@ public class PlayerCameraHold : MonoBehaviour
         return info;
     }
 
-   /// <summary>
-   /// 플레이어와 타겟이 멀어졌을때 타겟팅 자동 종료
-   /// </summary>
-   /// <returns></returns>
+    /// <summary>
+    /// 플레이어와 타겟이 멀어졌을때 타겟팅 자동 종료
+    /// </summary>
+    /// <returns></returns>
     IEnumerator CheckDistanceToTarget()
     {
         while (true)
         {
             if (_target.transform != null)
             {
-                if (Vector3.Distance(_player.transform.position, _target.transform.position) > _detectRange)
+                //if (Vector3.Distance(_player.transform.position, _target.transform.position) > _detectRange)
+                if ((_player.transform.position - _target.transform.position).sqrMagnitude > Mathf.Pow(_detectRange, 2))
                 {
                     gameObject.SetActive(false);
                 }
