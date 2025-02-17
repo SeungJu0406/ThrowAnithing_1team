@@ -436,8 +436,8 @@ public class ObjectPool : MonoBehaviour
     }
     private IEnumerator IsActiveRoutine(int id)
     {
-        float maxTimer = 10;
-        float delayTime = 5;
+        float maxTimer = 300;
+        float delayTime = 10;
         float timer = maxTimer;
         while (true)
         {      
