@@ -18,7 +18,7 @@ public class Test : MonoBehaviour
     private void OnEnable()
     {
         uiParticle.transform.position = Input.mousePosition;
-        ParticleSystem particle = ObjectPool.GetPool(cursor, uiParticle.transform, 2f);
+        ParticleSystem particle = ObjectPool.Get(cursor, uiParticle.transform, 2f);
         uiParticle.RefreshParticles();
     }
 }

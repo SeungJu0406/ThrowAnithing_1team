@@ -180,7 +180,7 @@ namespace MKH
             {
                 SoundManager.PlaySFX(ivChoice);
                 slot.UseItem();
-                GameObject obj1 = ObjectPool.GetPool(choiceEffect, new Vector3(slot.transform.position.x, slot.transform.position.y, 0), Quaternion.identity, 0.5f);
+                GameObject obj1 = ObjectPool.Get(choiceEffect, new Vector3(slot.transform.position.x, slot.transform.position.y, 0), Quaternion.identity, 0.5f);
                 obj1.transform.SetParent(effectUI.transform);
                 mInventory.Sorting();
                 Debug.Log("장비 장착");
@@ -273,7 +273,7 @@ namespace MKH
 
                 SoundManager.PlaySFX(ivBreak);
                 slot.ClearSlot();
-                GameObject obj1 = ObjectPool.GetPool(breakEffect, new Vector3(slot.transform.position.x, slot.transform.position.y, 0), Quaternion.identity, 1f);
+                GameObject obj1 = ObjectPool.Get(breakEffect, new Vector3(slot.transform.position.x, slot.transform.position.y, 0), Quaternion.identity, 1f);
                 obj1.transform.SetParent(effectUI.transform);
                 mInventory.Sorting();
                 Debug.Log($"장비 분해");
@@ -456,7 +456,7 @@ namespace MKH
                 {
                     SoundManager.PlaySFX(emptyClick);
                     Vector2 pos = Input.mousePosition;
-                    GameObject obj1 = ObjectPool.GetPool(clickEffect, pos, Quaternion.identity, 1f);
+                    GameObject obj1 = ObjectPool.Get(clickEffect, pos, Quaternion.identity, 1f);
                     obj1.transform.SetParent(effectUI.transform);
                 }
                 return;

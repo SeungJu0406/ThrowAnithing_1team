@@ -46,7 +46,7 @@ public class SlowAddtional : HitAdditional
         {
             _remainDuration -= _effect.Interval;
 
-            GameObject effect = ObjectPool.GetPool(_effect.EffectPrefab, Battle.HitPoint.position.GetRandomPos(0.5f),transform.rotation, 1f);
+            GameObject effect = ObjectPool.Get(_effect.EffectPrefab, Battle.HitPoint.position.GetRandomPos(0.5f),transform.rotation, 1f);
             effect.transform.SetParent(transform);
             yield return _effect.Interval.GetDelay();
         }

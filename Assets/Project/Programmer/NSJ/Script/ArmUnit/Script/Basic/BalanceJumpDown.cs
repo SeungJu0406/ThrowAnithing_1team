@@ -116,7 +116,7 @@ public class BalanceJumpDown : ArmJumpDown
         }
 
         // 이펙트 생성
-        ObjectPool.GetPool(_attack.Effect, _landingPoint, Quaternion.identity, 2f);
+        ObjectPool.Get(_attack.Effect, _landingPoint, Quaternion.identity, 2f);
     }
 
     public override void OnDrawGizmos()

@@ -110,7 +110,7 @@ public class PowerJumpDown : ArmJumpDown
 
 
         // 이펙트 생성
-        ObjectPool.GetPool(_attackEffect, _landingPoint, Quaternion.identity, 5f);
+        ObjectPool.Get(_attackEffect, _landingPoint, Quaternion.identity, 5f);
 
     }
 

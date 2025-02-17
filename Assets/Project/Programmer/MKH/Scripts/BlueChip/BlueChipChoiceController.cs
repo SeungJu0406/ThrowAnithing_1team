@@ -60,7 +60,7 @@ namespace MKH
                     _player.AddAdditional(blueChipChoicePanel.choiceSlots[number].Effect);
                     blueChipChoicePanel.blueChipList.RemoveAt(blueChipChoicePanel.choiceSlots[number].ListIndex);
 
-                    GameObject obj1 = ObjectPool.GetPool(choiceFinishEffect, effectUI.transform.position, Quaternion.identity, 1f);
+                    GameObject obj1 = ObjectPool.Get(choiceFinishEffect, effectUI.transform.position, Quaternion.identity, 1f);
                     obj1.transform.SetParent(effectUI.transform);
 
                     CloseUI();
@@ -147,7 +147,7 @@ namespace MKH
         {
             SoundManager.PlaySFX(removeClip);
 
-            GameObject obj = ObjectPool.GetPool(removeEffect, blueChipChoicePanel.blueChipSlots[popUpChoice].transform.position, Quaternion.identity, 1f);
+            GameObject obj = ObjectPool.Get(removeEffect, blueChipChoicePanel.blueChipSlots[popUpChoice].transform.position, Quaternion.identity, 1f);
             obj.transform.SetParent(effectUI.transform);
 
             yield return 0.5f.GetDelay();

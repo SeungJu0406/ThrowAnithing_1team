@@ -97,7 +97,7 @@ public class BalanceMeleeAttack : ArmMeleeAttack
 
         CoroutineHandler.StartRoutine(CooltimeRoutine(_coolTime));
 
-        ObjectPool.GetPool(_attackEffect, Player.MeleeAttackPoint.transform.position, transform.rotation, 2f);
+        ObjectPool.Get(_attackEffect, Player.MeleeAttackPoint.transform.position, transform.rotation, 2f);
     }
 
     public override void OnCombo()

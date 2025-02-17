@@ -194,11 +194,11 @@ public class DataContainer : MonoBehaviour
 
     static IEnumerator CreateItem(Vector3 pos, DropList dropList)
     {
-        GameObject startEffect = ObjectPool.GetPool(ItemPaticle[0], pos, Quaternion.Euler(-90f, 0, 0));
+        GameObject startEffect = ObjectPool.Get(ItemPaticle[0], pos, Quaternion.Euler(-90f, 0, 0));
 
         yield return 0.3f.GetDelay();
 
-        ObjectPool.ReturnPool(startEffect);
+        ObjectPool.Return(startEffect);
 
         GameObject dropPrefab = dropList.itemList[Random.Range(0, dropList.Count)];
         GameObject obj = Instantiate(dropPrefab, pos + new Vector3(0, 1, 0), Quaternion.identity);
@@ -208,11 +208,11 @@ public class DataContainer : MonoBehaviour
         {
             Destroy(obj);
 
-            GameObject endEffect = ObjectPool.GetPool(ItemPaticle[1], pos + new Vector3(0, 1, 0), Quaternion.Euler(-90f, 0, 0));
+            GameObject endEffect = ObjectPool.Get(ItemPaticle[1], pos + new Vector3(0, 1, 0), Quaternion.Euler(-90f, 0, 0));
 
             yield return 0.5f.GetDelay();
 
-            ObjectPool.ReturnPool(endEffect);
+            ObjectPool.Return(endEffect);
         }
     }
 
@@ -221,7 +221,7 @@ public class DataContainer : MonoBehaviour
     {
         SoundManager.PlaySFX(AudioClip[0]);
 
-        GameObject startEffect = ObjectPool.GetPool(ItemPaticle[0], pos, Quaternion.Euler(-90f, 0, 0), 0.3f);
+        GameObject startEffect = ObjectPool.Get(ItemPaticle[0], pos, Quaternion.Euler(-90f, 0, 0), 0.3f);
 
         switch (type)
         {
@@ -234,7 +234,7 @@ public class DataContainer : MonoBehaviour
                 {
                     Destroy(obj);
                     SoundManager.PlaySFX(AudioClip[1]);
-                    GameObject endEffect = ObjectPool.GetPool(ItemPaticle[1], pos + new Vector3(0, 1, 0), Quaternion.Euler(-90f, 0, 0), 0.5f);
+                    GameObject endEffect = ObjectPool.Get(ItemPaticle[1], pos + new Vector3(0, 1, 0), Quaternion.Euler(-90f, 0, 0), 0.5f);
                 }
                 break;
 
@@ -247,7 +247,7 @@ public class DataContainer : MonoBehaviour
                 {
                     Destroy(obj1);
                     SoundManager.PlaySFX(AudioClip[1]);
-                    GameObject endEffect = ObjectPool.GetPool(ItemPaticle[1], pos + new Vector3(0, 1, 0), Quaternion.Euler(-90f, 0, 0), 0.5f);
+                    GameObject endEffect = ObjectPool.Get(ItemPaticle[1], pos + new Vector3(0, 1, 0), Quaternion.Euler(-90f, 0, 0), 0.5f);
                 }
                 break;
 
@@ -260,7 +260,7 @@ public class DataContainer : MonoBehaviour
                 {
                     Destroy(obj2);
                     SoundManager.PlaySFX(AudioClip[1]);
-                    GameObject endEffect = ObjectPool.GetPool(ItemPaticle[1], pos + new Vector3(0, 1, 0), Quaternion.Euler(-90f, 0, 0), 0.5f);
+                    GameObject endEffect = ObjectPool.Get(ItemPaticle[1], pos + new Vector3(0, 1, 0), Quaternion.Euler(-90f, 0, 0), 0.5f);
                 }
                 break;
 
@@ -273,7 +273,7 @@ public class DataContainer : MonoBehaviour
                 {
                     Destroy(obj3);
                     SoundManager.PlaySFX(AudioClip[1]);
-                    GameObject endEffect = ObjectPool.GetPool(ItemPaticle[1], pos + new Vector3(0, 1, 0), Quaternion.Euler(-90f, 0, 0), 0.5f);
+                    GameObject endEffect = ObjectPool.Get(ItemPaticle[1], pos + new Vector3(0, 1, 0), Quaternion.Euler(-90f, 0, 0), 0.5f);
                 }
                 break;
 
@@ -286,7 +286,7 @@ public class DataContainer : MonoBehaviour
                 {
                     Destroy(obj4);
                     SoundManager.PlaySFX(AudioClip[1]);
-                    GameObject endEffect = ObjectPool.GetPool(ItemPaticle[1], pos + new Vector3(0, 1, 0), Quaternion.Euler(-90f, 0, 0), 0.5f);
+                    GameObject endEffect = ObjectPool.Get(ItemPaticle[1], pos + new Vector3(0, 1, 0), Quaternion.Euler(-90f, 0, 0), 0.5f);
                 }
                 break;
         }

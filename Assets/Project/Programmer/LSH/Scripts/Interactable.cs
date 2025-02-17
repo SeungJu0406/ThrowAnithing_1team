@@ -85,8 +85,8 @@ public class Interactable : MonoBehaviour
         if (itemPrefabs[0])
         {
             SoundManager.PlaySFX(bluechip);
-            ObjectPool.GetPool(createEffect, itemPrefabs[0].transform.position, Quaternion.Euler(-90, 0, 0), 5f);
-            Debug.Log(ObjectPool.GetPool(createEffect, transform.position, Quaternion.Euler(-90, 0, 0), 5f));
+            ObjectPool.Get(createEffect, itemPrefabs[0].transform.position, Quaternion.Euler(-90, 0, 0), 5f);
+            Debug.Log(ObjectPool.Get(createEffect, transform.position, Quaternion.Euler(-90, 0, 0), 5f));
         }
 
 

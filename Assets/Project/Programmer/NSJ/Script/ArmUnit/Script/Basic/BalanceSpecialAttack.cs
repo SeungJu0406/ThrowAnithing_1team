@@ -147,15 +147,15 @@ public class BalanceSpecialAttack : ArmSpecialAttack
     IEnumerator ChargeRoutine()
     {
         // 차지 이펙트 생성
-        _chargeEffect.Effect = ObjectPool.GetPool(_chargeEffect.EffectPrefab, transform);
+        _chargeEffect.Effect = ObjectPool.Get(_chargeEffect.EffectPrefab, transform);
         while (true)
         {
             ProcessCharge();
             if (InputKey.GetButtonUp(InputKey.Special))
             {
-                ObjectPool.ReturnPool(_chargeEffect.Effect);
+                ObjectPool.Return(_chargeEffect.Effect);
 
-                ObjectPool.GetPool(_chargeEffect.ChargeEndEffect, transform, 2f);
+                ObjectPool.Get(_chargeEffect.ChargeEndEffect, transform, 2f);
 
                 ChangeState(PlayerController.State.SpecialAttack);
                 yield break;
@@ -178,7 +178,7 @@ public class BalanceSpecialAttack : ArmSpecialAttack
                 if (Model.SpecialChargeGage >= _charges[_index].ChargeMana)
                 {
                     _index++;
-                    ObjectPool.GetPool(_chargeEffect.StepUpEffectPrefab, transform, 1f);
+                    ObjectPool.Get(_chargeEffect.StepUpEffectPrefab, transform, 1f);
                 }
                 // 현재 특수자원량보다 차지량이 더 많은 경우
                 else if (Model.SpecialChargeGage > Model.CurMana)
@@ -256,8 +256,8 @@ public class BalanceSpecialAttack : ArmSpecialAttack
         Player.TriggerPlayerAdditional();
 
 
-        ObjectPool.GetPool(_first.SpecialEffect, Player.RightArmPoint, 2f);
-        ObjectPool.GetPool(_first.BuffEffectPrefab, transform, _first.Duration);
+        ObjectPool.Get(_first.SpecialEffect, Player.RightArmPoint, 2f);
+        ObjectPool.Get(_first.BuffEffectPrefab, transform, _first.Duration);
         ChangeState(Player.PrevState);
 
 
@@ -270,7 +270,7 @@ public class BalanceSpecialAttack : ArmSpecialAttack
         Model.AttackSpeedMultiplier -= _first.AttackSpeed;
         _balance.OnFirstSpecial = false;
 
-        ObjectPool.GetPool(_first.BuffEndEffect, transform,3f);
+        ObjectPool.Get(_first.BuffEndEffect, transform,3f);
         _firstSpecialRoutine = null;
     }
     /// <summary>
@@ -286,7 +286,7 @@ public class BalanceSpecialAttack : ArmSpecialAttack
     /// </summary>
     private void ThrowSpecialObject()
     {
-        SpecialObject specialObject = ObjectPool.GetPool(_second.SpecialObject, _muzzlePoint.position, _muzzlePoint.rotation);
+        SpecialObject specialObject = ObjectPool.Get(_second.SpecialObject, _muzzlePoint.position, _muzzlePoint.rotation);
         specialObject.Init(Player, CrowdControlType.None, true, 0,Model.ThrowAdditionals);
         specialObject.InitSpecial(_second.Damage, _second.MiddleDamage, _second.Range, _second.MiddleRange);
         specialObject.Shoot(Player.ThrowPower);
@@ -324,7 +324,7 @@ public class BalanceSpecialAttack : ArmSpecialAttack
             attackPos = new Vector3(hit.point.x, hit.point.y + 0.01f, hit.point.z);
         }
 
-        GameObject beforeEffect = ObjectPool.GetPool(_third.BeforeEffect, attackPos, Quaternion.identity);
+        GameObject beforeEffect = ObjectPool.Get(_third.BeforeEffect, attackPos, Quaternion.identity);
         beforeEffect.transform.localScale *= _third.MiddleRange;
 
         yield return (_third.AttackDelay-0.3f).GetDelay();
@@ -332,14 +332,14 @@ public class BalanceSpecialAttack : ArmSpecialAttack
         // 내려치는 사운드
         SoundManager.PlaySFX(Player.Sound.Balance.Special3Hit);
         yield return 0.3f.GetDelay();
-        ObjectPool.ReturnPool(beforeEffect);
+        ObjectPool.Return(beforeEffect);
         // 루프 사운드
         SoundManager.PlaySFX(Player.Sound.Balance.Special3Loop);
         // 공격
         for (int i = 0; i < 8; i++) 
         {
             AttackBombard(attackPos);
-            GameObject effect = ObjectPool.GetPool(_third.Effect, attackPos, _third.Effect.transform.rotation, 1f);       
+            GameObject effect = ObjectPool.Get(_third.Effect, attackPos, _third.Effect.transform.rotation, 1f);       
             effect.transform.localScale *= _third.MiddleRange;
             yield return 0.25f.GetDelay();
         }

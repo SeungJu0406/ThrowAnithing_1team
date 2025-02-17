@@ -92,17 +92,17 @@ public class PowerSpecialAttack : ArmSpecialAttack
         if (_effectObject != null)
         {
             _effectObject.End();
-            ObjectPool.ReturnPool(_effectObject);
+            ObjectPool.Return(_effectObject);
             _effectObject = null;
         }
         if (_instanceSpecialRange != null)
         {
-            ObjectPool.ReturnPool(_instanceSpecialRange);
+            ObjectPool.Return(_instanceSpecialRange);
             _instanceSpecialRange = null;
         }
         if (_chargeEffect != null)
         {
-            ObjectPool.ReturnPool(_chargeEffect);
+            ObjectPool.Return(_chargeEffect);
         }
         #endregion
         // 사운드 끄기
@@ -120,7 +120,7 @@ public class PowerSpecialAttack : ArmSpecialAttack
     {
         if (_chargeEffect != null)
         {
-            ObjectPool.ReturnPool(_chargeEffect);
+            ObjectPool.Return(_chargeEffect);
         }
         AttackSpecial();
     }
@@ -227,7 +227,7 @@ public class PowerSpecialAttack : ArmSpecialAttack
     {
         if(_effectObject == null)
         {
-            _effectObject = ObjectPool.GetPool(_effect.EffectObject, Player.RightArmPoint.position, _effect.EffectObject.transform.rotation);
+            _effectObject = ObjectPool.Get(_effect.EffectObject, Player.RightArmPoint.position, _effect.EffectObject.transform.rotation);
             _effectObject.transform.SetParent(Player.RightArmPoint);
         }
         else
@@ -248,7 +248,7 @@ public class PowerSpecialAttack : ArmSpecialAttack
 
         if (_instanceSpecialRange == null)
         {
-            _instanceSpecialRange = ObjectPool.GetPool(_specialRange, _dropPos, Quaternion.identity);
+            _instanceSpecialRange = ObjectPool.Get(_specialRange, _dropPos, Quaternion.identity);
         }
         // 크기 조정
         _instanceSpecialRange.transform.localScale = new Vector3(
@@ -261,9 +261,9 @@ public class PowerSpecialAttack : ArmSpecialAttack
     {
         if (_chargeEffect != null)
         {
-            ObjectPool.ReturnPool(_chargeEffect);
+            ObjectPool.Return(_chargeEffect);
         }
-        _chargeEffect = ObjectPool.GetPool(_effect.Effects[_index].ChargeEffect, Player.RightArmPoint);
+        _chargeEffect = ObjectPool.Get(_effect.Effects[_index].ChargeEffect, Player.RightArmPoint);
     }
     private void AttackSpecial()
     {
@@ -300,15 +300,15 @@ public class PowerSpecialAttack : ArmSpecialAttack
 
         
         // 타격지점 이펙트 생성
-        GameObject attackEffect = ObjectPool.GetPool(_effect.Attack, _dropPos, Quaternion.identity, 2f);
+        GameObject attackEffect = ObjectPool.Get(_effect.Attack, _dropPos, Quaternion.identity, 2f);
         attackEffect.transform.localScale = Util.GetPos(_charges[_index].Radius/2);
         // 풀차지는 추가 이펙트 생성
         if (_index == _charges.Length - 1) 
         {
-            ObjectPool.GetPool(_effect.FullCharge, _dropPos, Quaternion.identity, 2f);
+            ObjectPool.Get(_effect.FullCharge, _dropPos, Quaternion.identity, 2f);
         }
-        ObjectPool.ReturnPool(_instanceSpecialRange);
-        ObjectPool.ReturnPool(_effectObject,0.5f);
+        ObjectPool.Return(_instanceSpecialRange);
+        ObjectPool.Return(_effectObject,0.5f);
 
         // 공격 사운드
         SoundManager.PlaySFX(Player.Sound.Power.SpecialHit);

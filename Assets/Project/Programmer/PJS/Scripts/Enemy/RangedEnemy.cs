@@ -28,7 +28,7 @@ public class RangedEnemy : BaseEnemy
     public void Attack()
     {
         SoundManager.PlaySFX(attackClip);
-        EnemyBullet bulletPool = ObjectPool.GetPool(bulletPrefab, muzzle.position, muzzle.rotation);
+        EnemyBullet bulletPool = ObjectPool.Get(bulletPrefab, muzzle.position, muzzle.rotation);
         bulletPool.target = playerObj.Value.transform;
         bulletPool.Speed = bulletSpeed;
         bulletPool.Atk = state.Atk;

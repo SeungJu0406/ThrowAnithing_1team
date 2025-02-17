@@ -32,9 +32,9 @@ public class DrainState : PlayerState
         View.SetBool(PlayerView.Parameter.Drain, true);
 
         // 이펙트
-        _drainField = ObjectPool.GetPool(Effect.Drain_Range, transform);
+        _drainField = ObjectPool.Get(Effect.Drain_Range, transform);
         _drainField.transform.localScale = new Vector3(0, _drainField.transform.localScale.y, 0);
-        _drainEffect = ObjectPool.GetPool(Effect.Drain_Charge, Player.Battle.HitPoint);
+        _drainEffect = ObjectPool.Get(Effect.Drain_Charge, Player.Battle.HitPoint);
 
         // 플레이어 위치 고정시킬 좌표 캐싱
         _drainStartPos = transform.position;
@@ -56,8 +56,8 @@ public class DrainState : PlayerState
         Player.CanStaminaRecovery = true;     
         View.SetBool(PlayerView.Parameter.Drain, false);
 
-        ObjectPool.ReturnPool(_drainField);
-        ObjectPool.ReturnPool(_drainEffect);
+        ObjectPool.Return(_drainField);
+        ObjectPool.Return(_drainEffect);
     }
 
     public override void Update()
@@ -81,8 +81,8 @@ public class DrainState : PlayerState
 
     public override void OnTrigger()
     {
-        ObjectPool.ReturnPool(_drainField);
-        ObjectPool.ReturnPool(_drainEffect);
+        ObjectPool.Return(_drainField);
+        ObjectPool.Return(_drainEffect);
         if (_drainRoutine != null) 
         {
             CoroutineHandler.StopRoutine(_drainRoutine);

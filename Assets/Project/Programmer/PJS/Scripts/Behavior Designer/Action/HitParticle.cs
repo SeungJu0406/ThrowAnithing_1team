@@ -10,13 +10,13 @@ public class HitParticle : BaseAction
 
     public override void OnEnd()
     {
-        ObjectPool.ReturnPool(hit);
+        ObjectPool.Return(hit);
         takeDamege.SetValue(false);
     }
 
     public override TaskStatus OnUpdate()
 	{
-        hit = ObjectPool.GetPool(hitParticle, baseEnemy.Battle.HitPoint);
+        hit = ObjectPool.Get(hitParticle, baseEnemy.Battle.HitPoint);
         hit.Play();
 
         return TaskStatus.Success;

@@ -70,7 +70,7 @@ public class PowerThrowAttack : ArmThrowAttack
       
         if (_curChargeEffect != null) 
         {
-            ObjectPool.ReturnPool(_curChargeEffect);
+            ObjectPool.Return(_curChargeEffect);
             _curChargeEffect = null;
         }
         // 차지 사운드 종료
@@ -86,7 +86,7 @@ public class PowerThrowAttack : ArmThrowAttack
         ThrowObject();
         if (_curChargeEffect != null)
         {
-            ObjectPool.ReturnPool(_curChargeEffect, 0.3f);
+            ObjectPool.Return(_curChargeEffect, 0.3f);
             _curChargeEffect = null;
         }
     }
@@ -223,9 +223,9 @@ public class PowerThrowAttack : ArmThrowAttack
     {
         if (_curChargeEffect != null)
         {
-            ObjectPool.ReturnPool(_curChargeEffect);
+            ObjectPool.Return(_curChargeEffect);
         }
         // 암유닛 이펙트
-        _curChargeEffect = ObjectPool.GetPool(_effects[_index].Charge, Player.LeftArmPoint);
+        _curChargeEffect = ObjectPool.Get(_effects[_index].Charge, Player.LeftArmPoint);
     }
 }

@@ -96,7 +96,7 @@ public class ElectricDrainAddtional : PlayerAdditional
             // 파티클 이펙트 생성
             if (_curDrainDistance >= Model.DrainDistance)
             {
-                GameObject effect = ObjectPool.GetPool(_effect.Particle, transform, 1f);
+                GameObject effect = ObjectPool.Get(_effect.Particle, transform, 1f);
             }
             yield return 1f.GetDelay();
         }

@@ -27,7 +27,7 @@ public class DashBoom : PlayerAdditional
 
     private void Attack()
     {
-        GameObject effect= ObjectPool.GetPool(_effect.EffectPrefab, transform.position, Quaternion.identity, 1f);
+        GameObject effect= ObjectPool.Get(_effect.EffectPrefab, transform.position, Quaternion.identity, 1f);
         effect.transform.localScale *= _range;
 
         int hitCount = Physics.OverlapSphereNonAlloc(Battle.HitPoint.position, _range, Player.OverLapColliders, 1 << Layer.Monster);

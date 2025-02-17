@@ -22,7 +22,7 @@ public class PoizonAdditional : HitAdditional
 
         if (_debuffRoutine == null)
         {
-            _effect.Effect = ObjectPool.GetPool(_effect.EffectPrefab, Battle.HitPoint);
+            _effect.Effect = ObjectPool.Get(_effect.EffectPrefab, Battle.HitPoint);
             _debuffRoutine = CoroutineHandler.StartRoutine(PoisonRoutine());
         }
     }
@@ -31,7 +31,7 @@ public class PoizonAdditional : HitAdditional
     {
         if (_debuffRoutine != null)
         {
-            ObjectPool.ReturnPool(_effect.Effect);
+            ObjectPool.Return(_effect.Effect);
             CoroutineHandler.StopRoutine(_debuffRoutine);
             _debuffRoutine = null;
         }

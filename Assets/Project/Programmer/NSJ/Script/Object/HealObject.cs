@@ -15,7 +15,7 @@ public class HealObject : MonoBehaviour
         {
             IHeal healable = other.gameObject.GetComponent<IHeal>();
             healable.TakeHeal(_healAmount);
-            ObjectPool.GetPool(_effect, transform.position, transform.rotation, 2f);
+            ObjectPool.Get(_effect, transform.position, transform.rotation, 2f);
             Destroy(gameObject);
         }
     }

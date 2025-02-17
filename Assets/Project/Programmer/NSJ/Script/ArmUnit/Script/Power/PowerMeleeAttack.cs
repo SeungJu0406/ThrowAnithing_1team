@@ -96,7 +96,7 @@ public class PowerMeleeAttack : ArmMeleeAttack
         // 암유닛 차지 이펙트 제거
         if (_curChargeEffect != null)
         {
-            ObjectPool.ReturnPool(_curChargeEffect);
+            ObjectPool.Return(_curChargeEffect);
             _curChargeEffect = null;
         }
 
@@ -121,7 +121,7 @@ public class PowerMeleeAttack : ArmMeleeAttack
         // 암유닛 차지 이펙트 제거
         if (_curChargeEffect != null)
         {
-            ObjectPool.ReturnPool(_curChargeEffect);
+            ObjectPool.Return(_curChargeEffect);
             _curChargeEffect = null;
         }
     }
@@ -234,7 +234,7 @@ public class PowerMeleeAttack : ArmMeleeAttack
                 break;
         }
 
-        ObjectPool.GetPool(_effects.Charges[_index].Attack, Player.MeleeAttackPoint.transform.position, transform.rotation, 2f);
+        ObjectPool.Get(_effects.Charges[_index].Attack, Player.MeleeAttackPoint.transform.position, transform.rotation, 2f);
 
     }
     public override void OnDrawGizmos()
@@ -261,10 +261,10 @@ public class PowerMeleeAttack : ArmMeleeAttack
     {
         if (_curChargeEffect != null)
         {
-            ObjectPool.ReturnPool(_curChargeEffect);
+            ObjectPool.Return(_curChargeEffect);
         }
         // 암유닛 이펙트
-        _curChargeEffect = ObjectPool.GetPool(_effects.Charges[_index].Charge, Player.RightArmPoint);
+        _curChargeEffect = ObjectPool.Get(_effects.Charges[_index].Charge, Player.RightArmPoint);
     }
 
     private void ChargeEnd()
@@ -289,7 +289,7 @@ public class PowerMeleeAttack : ArmMeleeAttack
         // 풀차지시(돌진 가능할 때) 돌진 이펙트
         if (rushDistance > 0)
         {
-            ObjectPool.GetPool(_effects.Full, Player.DashFrountPoint, 2f);
+            ObjectPool.Get(_effects.Full, Player.DashFrountPoint, 2f);
         }
 
 

@@ -354,7 +354,7 @@ public class BossEnemy : BaseEnemy, IHit
         else if (curPhase == PhaseType.Phase1)
         {
             fistParticle.Play();
-            CreateElectricZone electricZone = ObjectPool.GetPool(fistGroundParticle.gameObject, pos.position, pos.rotation, 4.5f).GetComponent<CreateElectricZone>();
+            CreateElectricZone electricZone = ObjectPool.Get(fistGroundParticle.gameObject, pos.position, pos.rotation, 4.5f).GetComponent<CreateElectricZone>();
             electricZone.battle = Battle;
             SoundManager.PlaySFX(fistHitClip);
         }

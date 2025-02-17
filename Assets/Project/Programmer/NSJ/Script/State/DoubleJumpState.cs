@@ -45,7 +45,7 @@ public class DoubleJumpState : PlayerState
         
         Rb.AddForce(Vector3.up * Model.JumpPower, ForceMode.Impulse);
         // 파티클 실행
-        ObjectPool.GetPool(Effect.DoubleJump, transform.position, Effect.DoubleJump.transform.rotation, 1f);
+        ObjectPool.Get(Effect.DoubleJump, transform.position, Effect.DoubleJump.transform.rotation, 1f);
         // 점프 이후 바로 추락 모드 실행
         ChangeState(PlayerController.State.DoubleJumpFall);
     }

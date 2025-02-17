@@ -358,7 +358,7 @@ public class PlayerController : MonoBehaviour, IHit, IHeal
         Model.CurHp += drainAmount;
 
         if (drainAmount > 0)
-            ObjectPool.GetPool(Effect.LifeDrain, Battle.HitPoint.position.GetRandomPos(0.5f), transform.rotation, 1f);
+            ObjectPool.Get(Effect.LifeDrain, Battle.HitPoint.position.GetRandomPos(0.5f), transform.rotation, 1f);
     }
     /// <summary>
     /// 피해 흡혈(모델 피흡 + 추가 피흡)
@@ -369,7 +369,7 @@ public class PlayerController : MonoBehaviour, IHit, IHeal
         Model.CurHp += drainAmount;
 
         if (drainAmount > 0)
-            ObjectPool.GetPool(Effect.LifeDrain, Battle.HitPoint.position.GetRandomPos(0.5f), transform.rotation, 1f);
+            ObjectPool.Get(Effect.LifeDrain, Battle.HitPoint.position.GetRandomPos(0.5f), transform.rotation, 1f);
     }
 
     #endregion

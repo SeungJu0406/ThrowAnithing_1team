@@ -43,15 +43,15 @@ public class EnemyBullet : MonoBehaviour
         if (other.transform.tag == Tag.Player)
         {
             Battle.TargetAttack(other.transform, Atk, false);
-            ObjectPool.ReturnPool(this);
+            ObjectPool.Return(this);
         }
 
-        ObjectPool.ReturnPool(this);
+        ObjectPool.Return(this);
     }
 
     IEnumerator DestroyRoutine()
     {
         yield return 5f.GetDelay();
-        ObjectPool.ReturnPool(this);
+        ObjectPool.Return(this);
     }
 }

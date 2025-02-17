@@ -45,7 +45,7 @@ public class ElectricShockAdditonal : HitAdditional
             _debuffRoutine = null;
             // 깎인 양 만큼 복구
             ChangeValue(false);
-            ObjectPool.ReturnPool(_effect.Effect);
+            ObjectPool.Return(_effect.Effect);
         }
     }
 
@@ -124,7 +124,7 @@ public class ElectricShockAdditonal : HitAdditional
 
     private void CreateEffect()
     {
-        _effect.Effect = ObjectPool.GetPool(_effect.EffectPrefab, transform);
+        _effect.Effect = ObjectPool.Get(_effect.EffectPrefab, transform);
         _effect.Effect.transform.position = Battle.HitPoint.position;
     }
 }

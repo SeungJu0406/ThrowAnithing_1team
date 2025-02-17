@@ -122,7 +122,7 @@ public class TheortOfRelativityAdditional : PlayerAdditional
 
     private void CreateSlowFieldEffect()
     {
-        _effect.Effect = ObjectPool.GetPool(_effect.EffectPrefab, transform, _effect.EffectDuration);
+        _effect.Effect = ObjectPool.Get(_effect.EffectPrefab, transform, _effect.EffectDuration);
 
         Vector3 effectScale = _effect.Effect.transform.localScale;
         _effect.Effect.transform.localScale = new Vector3(_slowRange * 2, effectScale.y, _slowRange * 2);

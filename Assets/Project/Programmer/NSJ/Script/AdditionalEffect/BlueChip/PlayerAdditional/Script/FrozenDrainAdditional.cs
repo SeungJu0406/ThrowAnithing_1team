@@ -116,8 +116,7 @@ public class FrozenDrainAdditional : PlayerAdditional
             float z2 = transform.position.z + _curDrainDistance;
 
             Vector3 pos = new(Random.Range(x1, x2), y, Random.Range(z1, z2));
-            Debug.Log(pos);
-            GameObject effect = ObjectPool.GetPool(_effect.Snow, pos, Quaternion.identity, 1.5f);
+            GameObject effect = ObjectPool.Get(_effect.Snow, pos, Quaternion.identity, 1.5f);
         }
     }
 }

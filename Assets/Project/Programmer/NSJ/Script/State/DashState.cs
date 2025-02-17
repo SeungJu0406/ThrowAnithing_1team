@@ -140,9 +140,9 @@ public class DashState : PlayerState
         yield return null;
         yield return null;
         yield return null;
-        _armEffect = ObjectPool.GetPool(Effect.Dash_Arm, Player.DashArmPoint, 2f);
+        _armEffect = ObjectPool.Get(Effect.Dash_Arm, Player.DashArmPoint, 2f);
         yield return null;
         yield return null;
-        _frontEffect = ObjectPool.GetPool(Effect.Dash_Front, Player.DashFrountPoint, 2f);
+        _frontEffect = ObjectPool.Get(Effect.Dash_Front, Player.DashFrountPoint, 2f);
     }
 }

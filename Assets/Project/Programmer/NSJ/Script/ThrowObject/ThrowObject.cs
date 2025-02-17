@@ -222,7 +222,7 @@ public class ThrowObject : MonoBehaviour
         Player.Model.CurMana += SpecialRecovery;
         // 이펙트 
 
-        ObjectPool.GetPool(Effect.BoomHit, transform.position, transform.rotation, 1.5f);
+        ObjectPool.Get(Effect.BoomHit, transform.position, transform.rotation, 1.5f);
 
         Destroy(gameObject);
     }
@@ -241,7 +241,7 @@ public class ThrowObject : MonoBehaviour
         // 플레이어 특수공격 자원 획득
         Player.Model.CurMana += SpecialRecovery;
         // 이펙트 
-        ObjectPool.GetPool(Effect.Hit, transform.position, transform.rotation, 1.5f);
+        ObjectPool.Get(Effect.Hit, transform.position, transform.rotation, 1.5f);
 
         // 사운드
         SoundManager.PlaySFX(isCritical == true ? Player.Sound.Hit.Critical : Player.Sound.Hit.Hit);

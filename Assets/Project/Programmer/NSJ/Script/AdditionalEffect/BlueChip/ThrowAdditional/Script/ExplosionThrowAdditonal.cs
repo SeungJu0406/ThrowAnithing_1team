@@ -54,8 +54,8 @@ public class ExplosionThrowAdditonal : ThrowAdditional
 
     IEnumerator ShowEffectRoutine()
     {
-         _effect.Effect = ObjectPool.GetPool(_effect.EffectPrefab ,_throwObject.transform.position, _throwObject.transform.rotation);
+         _effect.Effect = ObjectPool.Get(_effect.EffectPrefab ,_throwObject.transform.position, _throwObject.transform.rotation);
         yield return _effect.EffectDuration.GetDelay();
-        ObjectPool.ReturnPool( _effect.Effect);
+        ObjectPool.Return( _effect.Effect);
     }
 }

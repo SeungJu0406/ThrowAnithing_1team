@@ -34,14 +34,14 @@ public class SpecialObject : ThrowObject
         base.OnEnable();
 
         // ÀÌÆåÆ® »ý¼º
-        _effect.ThrowTailEffect = ObjectPool.GetPool(_effect.ThrowTailEffectPrefab,transform);
+        _effect.ThrowTailEffect = ObjectPool.Get(_effect.ThrowTailEffectPrefab,transform);
     }
 
     protected override void OnCollisionEnter(Collision collision)
     {
         // ¶¥¿¡ ´ê¾Æµµ Æø¹ß
         ProcessExplosion();
-        ObjectPool.ReturnPool(gameObject);
+        ObjectPool.Return(gameObject);
     }
 
     protected override void OnDisable()
@@ -73,8 +73,8 @@ public class SpecialObject : ThrowObject
 
         ProcessExplosion();
         _effect.ThrowTailEffect.transform.SetParent(null);
-        ObjectPool.ReturnPool(_effect.ThrowTailEffect, 0.5f);
-        ObjectPool.ReturnPool(gameObject);
+        ObjectPool.Return(_effect.ThrowTailEffect, 0.5f);
+        ObjectPool.Return(gameObject);
     }
 
     /// <summary>
@@ -110,7 +110,7 @@ public class SpecialObject : ThrowObject
         }
 
         // ÀÌÆåÆ®
-        ObjectPool.GetPool(_effect.EffectPrefab, transform.position, transform.rotation, 1f);
+        ObjectPool.Get(_effect.EffectPrefab, transform.position, transform.rotation, 1f);
 
         // »ç¿îµå
         SoundManager.PlaySFX(Player.Sound.Balance.Special2Hit);

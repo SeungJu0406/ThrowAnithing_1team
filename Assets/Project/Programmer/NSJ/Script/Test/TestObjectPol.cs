@@ -12,7 +12,7 @@ public class TestObjectPol : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            ObjectPool.GetPool(prefab, 3f);
+            ObjectPool.Get(prefab, 3f);
         }
     }
 }

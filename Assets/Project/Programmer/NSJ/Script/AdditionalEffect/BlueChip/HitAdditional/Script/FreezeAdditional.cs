@@ -39,7 +39,7 @@ public class FreezeAdditional : HitAdditional
             CoroutineHandler.StopRoutine(_debuffRoutine);
             _debuffRoutine = null;
             ChangeValue(false);
-            ObjectPool.ReturnPool(_effect.Effect);
+            ObjectPool.Return(_effect.Effect);
         }   
     }
 
@@ -107,7 +107,7 @@ public class FreezeAdditional : HitAdditional
 
     private void CreateEffect()
     {
-        _effect.Effect = ObjectPool.GetPool(_effect.EffectPrefab, transform);
+        _effect.Effect = ObjectPool.Get(_effect.EffectPrefab, transform);
         _effect.Effect.transform.position = Battle.HitPoint.position;
     }
 
