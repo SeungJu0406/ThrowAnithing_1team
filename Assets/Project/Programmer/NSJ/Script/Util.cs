@@ -25,7 +25,7 @@ public static partial class Util
     }
 
     /// <summary>
-    /// 코루틴 딜레이 WaitForSeconds 가져오기
+    /// 코루틴 딜레이 WaitForSecondsRealtime 가져오기
     /// </summary>
     public static WaitForSecondsRealtime GetRealTimeDelay(this float delay)
     {
