@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921700192f80d1e4cbe9c5c75ae09ef7, type: 3}
+  m_Name: TripleShot
+  m_EditorClassIdentifier: 
+  Image: {fileID: 21300000, guid: a6ee190feafb6384d81db3424cf4bcee, type: 3}
+  Origin: {fileID: 11400000}
+  AdditionalType: 0
+  Name: "\uD2B8\uB9AC\uD50C \uC0F7"
+  Description: "\uACF5\uACA9\uC774 \uC138\uAC08\uB798\uB85C \uBC14\uB01C"
+  _angle: 10
+  CanTripleShot: 1

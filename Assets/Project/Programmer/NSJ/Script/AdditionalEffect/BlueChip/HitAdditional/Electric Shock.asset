@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5511de3538b936c48908b95fae598772, type: 3}
+  m_Name: Electric Shock
+  m_EditorClassIdentifier: 
+  Image: {fileID: 21300000, guid: 6819de840c2c4ae4f93a424b9f5f0226, type: 3}
+  Origin: {fileID: 11400000}
+  AdditionalType: 1
+  Name: "\uAC10\uC804 \uC0F7"
+  Description: "\uD53C\uD574\uB97C \uC785\uD788\uBA74 \uACF5\uC18D\uACFC \uC774\uC18D\uC744
+    \uAC10\uC18C\uC2DC\uD0B4"
+  Battle: {fileID: 0}
+  Duration: 2
+  Probability: 0
+  _moveSpeedReduction: 15
+  _attackSpeedReduction: 15
+  _effect:
+    EffectPrefab: {fileID: 1086113998807915796, guid: 7662c6db40561de4694c1ac8a5ee3add, type: 3}
+    Effect: {fileID: 0}

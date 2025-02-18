@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccb92e15c6491a489ef561658d9cf80, type: 3}
+  m_Name: Magic
+  m_EditorClassIdentifier: 
+  itemList:
+  - {fileID: 2775722574654817451, guid: b92436032b426294394cc98ca71972df, type: 3}
+  - {fileID: 5363894805636258809, guid: e0c0ad9b1f9ca4342ae84acf5ee8afb9, type: 3}
+  - {fileID: 3702379078742471912, guid: 89b43f2a0cb8ba545b3766b792159484, type: 3}
+  - {fileID: 5770703283940268272, guid: 2f7419046af06dd46b0c7da804d15701, type: 3}
+  - {fileID: 8980997497201883340, guid: 55c880d04eee44949a282517905aadc0, type: 3}
+  - {fileID: 5427920303137415798, guid: 36b08069590105e40a9ffcc86a226040, type: 3}
+  - {fileID: 3190723299721110919, guid: fea61be6be4cd5346bdebbb89e2be691, type: 3}
+  - {fileID: 2204493748522455069, guid: 0cd79653771ad064ebfa0b8ece859338, type: 3}
+  - {fileID: 70090273813865823, guid: 182fdbd75bc08c243931467eb329223b, type: 3}

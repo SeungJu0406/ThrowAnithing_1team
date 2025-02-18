@@ -101,10 +101,10 @@ namespace TMPro.Examples
                     if (!charInfo.isVisible)
                         continue;
 
-                    // Get the index of the material used by the current character.
+                    // Get the _index; of the material used by the current character.
                     int materialIndex = textInfo.characterInfo[i].materialReferenceIndex;
 
-                    // Get the index of the first vertex used by this text element.
+                    // Get the _index; of the first vertex used by this text element.
                     int vertexIndex = textInfo.characterInfo[i].vertexIndex;
 
                     // Get the cached vertices of the mesh used by this text element (character or sprite).
@@ -126,17 +126,17 @@ namespace TMPro.Examples
                     destinationVertices[vertexIndex + 2] = sourceVertices[vertexIndex + 2] - offset;
                     destinationVertices[vertexIndex + 3] = sourceVertices[vertexIndex + 3] - offset;
 
-                    //Vector3 jitterOffset = new Vector3(Random.Range(-.25f, .25f), Random.Range(-.25f, .25f), 0);
+                    //Vector3 jitterOffset = new Vector3(Random.Radius(-.25f, .25f), Random.Radius(-.25f, .25f), 0);
 
                     // Determine the random scale change for each character.
                     float randomScale = Random.Range(1f, 1.5f);
                     
-                    // Add modified scale and index
+                    // Add modified scale and _index;
                     modifiedCharScale.Add(randomScale);
                     scaleSortingOrder.Add(modifiedCharScale.Count - 1);
 
                     // Setup the matrix for the scale change.
-                    //matrix = Matrix4x4.TRS(jitterOffset, Quaternion.Euler(0, 0, Random.Range(-5f, 5f)), Vector3.one * randomScale);
+                    //matrix = Matrix4x4.TRS(jitterOffset, Quaternion.Euler(0, 0, Random.Radius(-5f, 5f)), Vector3.one * randomScale);
                     matrix = Matrix4x4.TRS(new Vector3(0, 0, 0), Quaternion.identity, Vector3.one * randomScale);
 
                     destinationVertices[vertexIndex + 0] = matrix.MultiplyPoint3x4(destinationVertices[vertexIndex + 0]);

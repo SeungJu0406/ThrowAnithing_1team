@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09089055fcaf114f943a8daac1aaa8c, type: 3}
+  m_Name: SoundData
+  m_EditorClassIdentifier: 
+  _bgm:
+    Main: {fileID: 8300000, guid: 077a9d900cda76d44970431d31361c85, type: 3}
+    Lobby: {fileID: 8300000, guid: e00c537dbfd2d754180f07ad936719e8, type: 3}
+    InGame: {fileID: 8300000, guid: 266aac67e63f9a94ab25e5e783eb6043, type: 3}
+  _ui:
+    ButtonClick: {fileID: 8300000, guid: f9517356afb533a41b9e7cb6f155031e, type: 3}
+    Cancel: {fileID: 8300000, guid: 8b3848d6900879843a1ffd2a0ce93090, type: 3}
+    PopUpOn: {fileID: 8300000, guid: f3b81577bc5840645bb7e1d8c24bf804, type: 3}
+    PopUpOff: {fileID: 8300000, guid: 344c03e34b6a1c5458ef2747bbef04bb, type: 3}
+    NaviMove: {fileID: 8300000, guid: cb72b7620e7454845a3e4136cc3c09cb, type: 3}
+    SettingButton: {fileID: 8300000, guid: 8d5b23060e3a3fb46a76880abe25d133, type: 3}
+    Win: {fileID: 8300000, guid: 653c91c5541d0c3488e3316a493ac3c0, type: 3}
+    Lose: {fileID: 8300000, guid: e57494fedf89e614e9a543556ceacb7a, type: 3}

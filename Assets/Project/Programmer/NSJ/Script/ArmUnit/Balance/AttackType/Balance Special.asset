@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f02c74e9f94b44a9f38819308fd3ad, type: 3}
+  m_Name: Balance Special
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  _chargeEffect:
+    EffectPrefab: {fileID: 4734949382737207850, guid: 6af3140f3556be049ba6d3aa4c88e1a5, type: 3}
+    Effect: {fileID: 0}
+    StepUpEffectPrefab: {fileID: 4872069741924549791, guid: d50fce7893d4f044d958f87fed112376, type: 3}
+    ChargeEndEffect: {fileID: 8550907640093501968, guid: cb65d95cd6035df499f246ea43b46eaf, type: 3}
+  _charges:
+  - ChargeTime: 0.5
+    ChargeMana: 30
+    ObjectCount: 0
+  - ChargeTime: 1
+    ChargeMana: 60
+    ObjectCount: 0
+  - ChargeTime: 1.5
+    ChargeMana: 150
+    ObjectCount: 0
+  _first:
+    SpecialEffect: {fileID: 8650152138477424840, guid: 4899588bc8256174a8ba116bab0845a3, type: 3}
+    BuffEffectPrefab: {fileID: 3455329643372487072, guid: 1b545f01fc060344583a92afffc377f0, type: 3}
+    BuffEndEffect: {fileID: 6619706455284860797, guid: 89138d17d7924a9428e8d5423972446a, type: 3}
+    BuffEffect: {fileID: 8650152138477424840, guid: 4899588bc8256174a8ba116bab0845a3, type: 3}
+    AttackSpeed: 30
+    Duration: 5
+  _second:
+    SpecialObject: {fileID: 7150701479900206840, guid: bb16ba393b019654b8fd8ad81f7447e4, type: 3}
+    Damage: 50
+    MiddleDamage: 100
+    Range: 3
+    MiddleRange: 1.5
+  _third:
+    Effect: {fileID: 3586613695516036120, guid: 3285b3c99918bc34fbf77d35072e2c84, type: 3}
+    BeforeEffect: {fileID: 6521460536958971469, guid: ad32dec7ae1b85c46a0fbaa770da90be, type: 3}
+    ElectricShockOrigin: {fileID: 11400000, guid: 4091af5b30b615242a7cae894cd9a73b, type: 2}
+    ElectricShock: {fileID: 11400000, guid: 4091af5b30b615242a7cae894cd9a73b, type: 2}
+    AttackDelay: 2
+    AttackOffset: {x: 4.5, y: 0, z: 4.5}
+    Damage: 200
+    MiddleDamage: 300
+    Range: 10
+    MiddleRange: 2
+    ElectricShockDuration: 2

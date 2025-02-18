@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b295f56159786c64e9f26bc7e81e183e, type: 3}
+  m_Name: Power Throw
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  _charges:
+  - ChargeTime: 0
+    ObjectCount: 0
+    Damage: 10
+    CCType: 0
+    KnockBackDistance: 0
+  - ChargeTime: 0.25
+    ObjectCount: 1
+    Damage: 40
+    CCType: 1
+    KnockBackDistance: 0
+  - ChargeTime: 0.5
+    ObjectCount: 2
+    Damage: 70
+    CCType: 1
+    KnockBackDistance: 0
+  - ChargeTime: 0.75
+    ObjectCount: 3
+    Damage: 110
+    CCType: 1
+    KnockBackDistance: 0.5
+  _effects:
+  - Charge: {fileID: 0}
+  - Charge: {fileID: 2666987530771428612, guid: fdbcf892c078f02419f088aa26cf0ad0, type: 3}
+  - Charge: {fileID: 3131504231603907193, guid: 458f672a4ae3722469045b45217874ee, type: 3}
+  - Charge: {fileID: 6968367475162185451, guid: 05f723dce21b48d44b79cba893682fa7, type: 3}
+  _autoAttackDelay: 1

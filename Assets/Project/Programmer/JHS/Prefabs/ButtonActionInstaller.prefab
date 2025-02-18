@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6887060703644854147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5532705733500293126}
+  - component: {fileID: 6185352959263051064}
+  m_Layer: 0
+  m_Name: ButtonActionInstaller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5532705733500293126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6887060703644854147}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1496.3884, y: 302.50937, z: -0.29664043}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6185352959263051064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6887060703644854147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e121afa3c6772d4e9daaeaad03fb298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveButton: {fileID: 0}
+  cancelButton: {fileID: 0}
+  resetButton: {fileID: 0}
+  saveSoundButton: {fileID: 0}
+  cancelSoundButton: {fileID: 0}
+  resetSoundButton: {fileID: 0}
+  MinimapOn: {fileID: 0}
+  MinimapOff: {fileID: 0}
+  MiniMapFixOn: {fileID: 0}
+  MiniMapFixOff: {fileID: 0}
+  SensitivityBar: {fileID: 0}
+  totalVolumeBar: {fileID: 0}
+  backGroundVolume: {fileID: 0}
+  effectVolume: {fileID: 0}
+  languageChoce: {fileID: 0}
+  setting: {fileID: 0}

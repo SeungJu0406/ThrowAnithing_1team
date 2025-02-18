@@ -4,5 +4,36 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Project/Programmer/NSJ/Scenes/Combine/CombineJsonScene.unity
+    guid: c8f366549c641ec4ca6727d5b585b49d
+  - enabled: 1
+    path: Assets/Project/Programmer/NSJ/Scenes/Combine/CombineLobbyScene.unity
+    guid: 52b94334dc86c6b42bc9d5084680bde2
+  - enabled: 1
+    path: Assets/Project/Programmer/NSJ/Scenes/Combine/Combine 1_1Map.unity
+    guid: db07e5f88f8275b46bed04431811904a
+  - enabled: 1
+    path: Assets/Project/Programmer/NSJ/Scenes/Combine/Combine 1_2Stage.unity
+    guid: 5be6a19445d5c334099d0e298d98f3de
+  - enabled: 1
+    path: Assets/Project/Programmer/NSJ/Scenes/Combine/CombineBossStage.unity
+    guid: 6984bad2616d71a4699e9c0230b5077b
+  - enabled: 1
+    path: Assets/Project/Programmer/NSJ/Scenes/Combine/CombineHidden1.unity
+    guid: 766d4c9a3e404904297f07e015125acb
+  - enabled: 1
+    path: Assets/Project/Programmer/NSJ/Scenes/Combine/CombineHidden2.unity
+    guid: 434e6d66fa867c04fa9907fad250917b
+  - enabled: 1
+    path: Assets/Project/Programmer/NSJ/Scenes/Combine/CombineHidden3.unity
+    guid: e87242a3a3ab3004a9cc1236b97ab77b
+  - enabled: 1
+    path: Assets/Project/Programmer/NSJ/Scenes/Combine/CombineToLobbyLoading.unity
+    guid: d5aa03110be61694ea55179f1e458ffa
+  - enabled: 1
+    path: Assets/Project/Programmer/NSJ/Scenes/Combine/CombineToStageLoading.unity
+    guid: b827eea37888fc649aadc1208dd4c7d0
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 2130d3c2bd08ff947b5d194e992565ed, type: 2}

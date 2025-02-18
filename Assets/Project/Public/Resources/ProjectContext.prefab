@@ -1,0 +1,436 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5497864121346949552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7338240744370112664}
+  - component: {fileID: 7109610805531752767}
+  - component: {fileID: -5204339912961527784}
+  - component: {fileID: 2843022970376083190}
+  - component: {fileID: 3185848396629662587}
+  - component: {fileID: 1292623483343411748}
+  m_Layer: 0
+  m_Name: ProjectContext
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7338240744370112664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5497864121346949552}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7109610805531752767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5497864121346949552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e6589720da476459dc6dd71624b071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectInstallers: []
+  _monoInstallers:
+  - {fileID: -5204339912961527784}
+  _installerPrefabs: []
+  _parentNewObjectsUnderContext: 1
+  _editorReflectionBakingCoverageMode: 0
+  _buildsReflectionBakingCoverageMode: 0
+  _settings:
+    _ensureDeterministicDestructionOrderOnApplicationQuit: 0
+    _displayWarningWhenResolvingDuringInstall: 1
+    _validationRootResolveMethod: 0
+    _validationErrorResponse: 0
+    _signalSettings:
+      _defaultSyncMode: 0
+      _missingHandlerDefaultResponse: 2
+      _requireStrictUnsubscribe: 0
+      _defaultAsyncTickPriority: 1
+--- !u!114 &-5204339912961527784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5497864121346949552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93df38a378c99b4fb576504e25314fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalData:
+    coin: 0
+    maxCoin: 9999999
+    saveDateTime: 
+    upgradeLevels: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    upgradeCosts: e8030000e8030000e8030000e803000088130000881300008813000088130000102700001027000010270000102700003075000030750000307500003075000050c3000050c3000050c3000050c30000
+    usingCoin: 0
+    bringData: 1
+    nowWeapon: 0
+  playerData:
+    Data:
+      Hp:
+        MaxHp: 0
+        CurHp: 0
+      Attack:
+        AttackPower: 0
+        AttackPowerMultiplier: 0
+        AttackSpeed: 0
+        AttackSpeedMultiplier: 0
+        PowerMeleeAttack: []
+        PowerThrowAttack: []
+        PowerSpecialAttack: []
+      Defense:
+        Defense: 0
+        DamageReduction: 0
+      Critical:
+        CriticalChance: 0
+        CriticalDamage: 0
+      Stamina:
+        MaxStamina: 0
+        CurStamina: 0
+        RegainStamina: 0
+        StaminaCoolTime: 0
+        ConsumesStamina: 0
+        MaxStaminaCharge: 0
+        CurStaminaCharge: 0
+      Special:
+        MaxMana: 0
+        CurMana: 0
+        RegainMana: []
+        RegainAdditiveMana: 0
+        ManaConsumption: []
+        SpecialChargeGage: 0
+      Dash:
+        DashDistance: 0
+        DashStamina: 0
+      Jump:
+        JumpPower: 0
+        JumpStamina: 0
+        DoubleJumpStamina: 0
+        JumpDownStamina: 0
+        MaxJumpCount: 0
+        CurJumpCount: 0
+      NowWeapon: 0
+      Throw:
+        MaxThrowables: 0
+        CurThrowables: 0
+        GainMoreThrowables: 0
+        ThrowObjectStack: []
+      Additional:
+        AdditionalEffects: []
+        HitAdditionals: []
+        ThrowAdditionals: []
+        PlayerAdditionals: []
+      MoveSpeed: 0
+      DrainLife: 0
+      MeleeAttackStamina: []
+      EquipmentDropUpgrade: 0
+    IsDead: 0
+    Inventory:
+      Inventory: {fileID: 0}
+      InventoryMain: {fileID: 0}
+      BlueChipChoice: {fileID: 0}
+      BlueChipPanel: {fileID: 0}
+    test: 1
+  userDataManager: {fileID: 2843022970376083190}
+  globalPlayerStateData:
+    playerStateBase: {fileID: 11400000, guid: 197ede65146724b4e8dc68a0baf4f754, type: 2}
+    maxHp: 0
+    commonAttack: 0
+    shortRangeAttack:
+    - 0
+    - 0
+    - 0
+    longRangeAttack:
+    - 0
+    - 0
+    - 0
+    - 0
+    attackSpeed: 0
+    movementSpeed: 0
+    criticalChance: 0
+    defense: 0
+    equipmentDropUpgrade: 0
+    drainLife: 0
+    maxStamina: 0
+    regainStamina: 0
+    regainMana:
+    - 0
+    - 0
+    - 0
+    - 0
+    manaConsumption:
+    - 0
+    - 0
+    - 0
+    consumesStamina: 0
+    gainMoreThrowables: 0
+    maxThrowables: 0
+    maxMana: 0
+    maxJumpCount: 0
+    jumpPower: 0
+    jumpConsumesStamina: 0
+    doubleJumpConsumesStamina: 0
+    dashDistance: 0
+    dashConsumesStamina: 0
+    shortRangeAttackStamina:
+    - 0
+    - 0
+    - 0
+    specialAttack:
+    - 0
+    - 0
+    - 0
+  lobbyUpGrade: {fileID: 3185848396629662587}
+  optionSetting: {fileID: 1292623483343411748}
+  lobbyUpGradeState: {fileID: 11400000, guid: 6cb3b3edd0462a5428eff41aeff09f38, type: 2}
+--- !u!114 &2843022970376083190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5497864121346949552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4d0f11d48a74c45ae3e981a608bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nowPlayer:
+    coin: 0
+    maxCoin: 9999999
+    saveDateTime: 
+    upgradeLevels: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    upgradeCosts: e8030000e8030000e8030000e803000088130000881300008813000088130000102700001027000010270000102700003075000030750000307500003075000050c3000050c3000050c3000050c30000
+    usingCoin: 0
+    bringData: 1
+    nowWeapon: 0
+  playerstate:
+    playerStateBase: {fileID: 11400000, guid: 197ede65146724b4e8dc68a0baf4f754, type: 2}
+    maxHp: 0
+    commonAttack: 0
+    shortRangeAttack:
+    - 0
+    - 0
+    - 0
+    longRangeAttack:
+    - 0
+    - 0
+    - 0
+    - 0
+    attackSpeed: 0
+    movementSpeed: 0
+    criticalChance: 0
+    defense: 0
+    equipmentDropUpgrade: 0
+    drainLife: 0
+    maxStamina: 0
+    regainStamina: 0
+    regainMana:
+    - 0
+    - 0
+    - 0
+    - 0
+    manaConsumption:
+    - 0
+    - 0
+    - 0
+    consumesStamina: 0
+    gainMoreThrowables: 0
+    maxThrowables: 0
+    maxMana: 0
+    maxJumpCount: 0
+    jumpPower: 0
+    jumpConsumesStamina: 0
+    doubleJumpConsumesStamina: 0
+    dashDistance: 0
+    dashConsumesStamina: 0
+    shortRangeAttackStamina:
+    - 0
+    - 0
+    - 0
+    specialAttack:
+    - 0
+    - 0
+    - 0
+  path: 
+  nowSlot: 0
+--- !u!114 &3185848396629662587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5497864121346949552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb206f879bb479a4ab6a7d01c7ee72e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameData:
+    coin: 0
+    maxCoin: 9999999
+    saveDateTime: 
+    upgradeLevels: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    upgradeCosts: e8030000e8030000e8030000e803000088130000881300008813000088130000102700001027000010270000102700003075000030750000307500003075000050c3000050c3000050c3000050c30000
+    usingCoin: 0
+    bringData: 1
+    nowWeapon: 0
+  playerState:
+    playerStateBase: {fileID: 11400000, guid: 197ede65146724b4e8dc68a0baf4f754, type: 2}
+    maxHp: 0
+    commonAttack: 0
+    shortRangeAttack:
+    - 0
+    - 0
+    - 0
+    longRangeAttack:
+    - 0
+    - 0
+    - 0
+    - 0
+    attackSpeed: 0
+    movementSpeed: 0
+    criticalChance: 0
+    defense: 0
+    equipmentDropUpgrade: 0
+    drainLife: 0
+    maxStamina: 0
+    regainStamina: 0
+    regainMana:
+    - 0
+    - 0
+    - 0
+    - 0
+    manaConsumption:
+    - 0
+    - 0
+    - 0
+    consumesStamina: 0
+    gainMoreThrowables: 0
+    maxThrowables: 0
+    maxMana: 0
+    maxJumpCount: 0
+    jumpPower: 0
+    jumpConsumesStamina: 0
+    doubleJumpConsumesStamina: 0
+    dashDistance: 0
+    dashConsumesStamina: 0
+    shortRangeAttackStamina:
+    - 0
+    - 0
+    - 0
+    specialAttack:
+    - 0
+    - 0
+    - 0
+  player:
+    Data:
+      Hp:
+        MaxHp: 0
+        CurHp: 0
+      Attack:
+        AttackPower: 0
+        AttackPowerMultiplier: 0
+        AttackSpeed: 0
+        AttackSpeedMultiplier: 0
+        PowerMeleeAttack: []
+        PowerThrowAttack: []
+        PowerSpecialAttack: []
+      Defense:
+        Defense: 0
+        DamageReduction: 0
+      Critical:
+        CriticalChance: 0
+        CriticalDamage: 0
+      Stamina:
+        MaxStamina: 0
+        CurStamina: 0
+        RegainStamina: 0
+        StaminaCoolTime: 0
+        ConsumesStamina: 0
+        MaxStaminaCharge: 0
+        CurStaminaCharge: 0
+      Special:
+        MaxMana: 0
+        CurMana: 0
+        RegainMana: []
+        RegainAdditiveMana: 0
+        ManaConsumption: []
+        SpecialChargeGage: 0
+      Dash:
+        DashDistance: 0
+        DashStamina: 0
+      Jump:
+        JumpPower: 0
+        JumpStamina: 0
+        DoubleJumpStamina: 0
+        JumpDownStamina: 0
+        MaxJumpCount: 0
+        CurJumpCount: 0
+      NowWeapon: 0
+      Throw:
+        MaxThrowables: 0
+        CurThrowables: 0
+        GainMoreThrowables: 0
+        ThrowObjectStack: []
+      Additional:
+        AdditionalEffects: []
+        HitAdditionals: []
+        ThrowAdditionals: []
+        PlayerAdditionals: []
+      MoveSpeed: 0
+      DrainLife: 0
+      MeleeAttackStamina: []
+      EquipmentDropUpgrade: 0
+    IsDead: 0
+    Inventory:
+      Inventory: {fileID: 0}
+      InventoryMain: {fileID: 0}
+      BlueChipChoice: {fileID: 0}
+      BlueChipPanel: {fileID: 0}
+    test: 
+  saveSystem: {fileID: 0}
+  coinText: {fileID: 0}
+  usingCoinText: {fileID: 0}
+  lobbyUpGradeState: {fileID: 0}
+--- !u!114 &1292623483343411748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5497864121346949552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697e51160e2db114097fb494f7514944, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectSound: 0
+  backgroundSound: 0
+  wholesound: 0
+  cameraSpeed: 0.1
+  miniMapOnBool: 0
+  miniMapOn: 0
+  miniMapFixBool: 0
+  miniMapFix: 0

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34071f07530ff7c41ab8c954b7127443, type: 3}
+  m_Name: Sniper
+  m_EditorClassIdentifier: 
+  Image: {fileID: 21300000, guid: 7face38e40e548d41bfadcae5ad90da1, type: 3}
+  Origin: {fileID: 11400000}
+  AdditionalType: 0
+  Name: "\uC800\uACA9\uC218"
+  Description: "\uD22C\uCC99\uBB3C\uC774 \uB0A0\uC544\uAC04 \uAC70\uB9AC\uC5D0 \uBE44\uB840\uD558\uC5EC
+    \uCD5C\uB300 40%\uC758 \uCD94\uAC00 \uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
+  _maxIncreaseDamage: 40
+  _maxDistance: 6

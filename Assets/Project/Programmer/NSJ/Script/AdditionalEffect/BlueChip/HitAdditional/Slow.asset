@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d782bde2f6371e4e9e08122b2ce4587, type: 3}
+  m_Name: Slow
+  m_EditorClassIdentifier: 
+  Image: {fileID: 21300000, guid: cbc6b0da444cc3e488616aa73c2ea8ae, type: 3}
+  Origin: {fileID: 11400000}
+  AdditionalType: 1
+  Name: "\uC2AC\uB85C\uC6B0 \uC0F7"
+  Description: "\uD22C\uCC99\uBB3C \uC801\uC911 \uC2DC \uD574\uB2F9 \uC801 3\uCD08\uAC04
+    30%\uB9CC\uD07C \uB290\uB9AC\uAC8C \uB9CC\uB4ED\uB2C8\uB2E4."
+  Battle: {fileID: 0}
+  Duration: 3
+  SlowAmount: 30
+  _effect:
+    EffectPrefab: {fileID: 8756551578261061290, guid: 7240a125d57861c42bfd5fd076bfda5e, type: 3}
+    Effect: {fileID: 0}
+    Interval: 0.2

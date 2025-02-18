@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6a0184037ba704595d0798461ecc8d, type: 3}
+  m_Name: PlayerSound
+  m_EditorClassIdentifier: 
+  Hit:
+    Hits:
+    - {fileID: 8300000, guid: 23d62f9f40b25c14b927767b0d14d1a0, type: 3}
+    - {fileID: 8300000, guid: fba9d42e35a83f04b993710434adb0e7, type: 3}
+    - {fileID: 8300000, guid: 979280e2b053cf84288781af81f84017, type: 3}
+    - {fileID: 8300000, guid: 1fcc20db74bfd854ebfa88a721c95c09, type: 3}
+    Critical: {fileID: 8300000, guid: 2b690b1bde8958042923dc2c3a55aa8a, type: 3}
+  Power:
+    SpecialHit: {fileID: 8300000, guid: 117837e885b4da7478195f5927e75179, type: 3}
+    Charge: {fileID: 8300000, guid: 545704946a0271c4da572d35c2f6af5b, type: 3}
+  Balance:
+    Special2Hit: {fileID: 8300000, guid: 9575aabc65bc0224abb0d38b829b6cfb, type: 3}
+    Special3Hit: {fileID: 8300000, guid: 1f5b519b77528774287d94d12ac7ac4d, type: 3}
+    Special3Loop: {fileID: 8300000, guid: d67a80af814223149ac6cbe89e4c059c, type: 3}
+  Move:
+    Dash: {fileID: 8300000, guid: 9abbc43e9c6c5de40a2f6170d586219c, type: 3}
+    DoubleJump: {fileID: 8300000, guid: 2fe02f29d8c0d1f468ee9a69ef878110, type: 3}
+    JumpAttack: {fileID: 8300000, guid: ec94d567e75cef945b3159eba24780c3, type: 3}
+    Landing: {fileID: 8300000, guid: 930bc9f4ddbc6634588381ce02027a86, type: 3}

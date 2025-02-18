@@ -3,7 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Monster
+  - Item
+  - Portal
+  - Trash
+  - BlueChip
+  - PortalHidden
+  - Zombie
+  - ZombieCRD
+  - Missile
+  - UnInteractable
+  - Canvas
+  - ObjectPool
+  - Inventory
+  - InputKey
   layers:
   - Default
   - TransparentFX
@@ -11,16 +25,16 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Wall
+  - HideWall
+  - Item
+  - Forge
+  - Player
+  - Monster
+  - ThrowObject
+  - CanPickTrash
+  - CantPickTrash
+  - Bullet
   - 
   - 
   - 

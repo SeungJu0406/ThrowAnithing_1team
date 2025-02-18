@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f292feffd81df4b81ebd711a459792, type: 3}
+  m_Name: Glasses_Magic
+  m_EditorClassIdentifier: 
+  mName: 
+  mDescription: 
+  mItemType: 4
+  mRateType: 1
+  mItemImage: {fileID: -538364639, guid: 737f0f2656384af46b4b92cd9ab63349, type: 3}
+  mItemPrefab: {fileID: 0}
+  mEffect:
+    mDamage: 0
+    mDefense: 0
+    mHP: 0
+    mCritical: 0
+    mAttackSpeed: 0
+    mStemina: 0
+    mEquipRate: 0
+    mSpeed: 0
+    mMana: 0

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce2a3cd7d96b0a4394355ff219c226f, type: 3}
+  m_Name: BalanceArm
+  m_EditorClassIdentifier: 
+  Name: Balance
+  ArmType: 0
+  Player: {fileID: 0}
+  _attackType:
+    ThrowAttack: {fileID: 11400000, guid: 0db2918b80768f34491325d94238be45, type: 2}
+    MeleeAttack: {fileID: 11400000, guid: a000415e33e30434a958932f249266f4, type: 2}
+    SpecialAttack: {fileID: 11400000, guid: 85d65ea705377c248a591d54e806d6eb, type: 2}
+    JumpDown: {fileID: 11400000, guid: eaef1cb968cb9e74684711b8de528af5, type: 2}
+    JumpAttack: {fileID: 11400000, guid: 78a06c9e6b231cd47bef52e3f2e9f060, type: 2}
+  _types: []
+  _init:
+    DashStamina: 30
+    DashDistance: 100
+    DrainStamina: 50
+    DrainDistance: 75
+    MaxMana: 150

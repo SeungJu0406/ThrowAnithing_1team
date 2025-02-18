@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94bf49e84044d0d40affbba67146e6c9, type: 3}
+  m_Name: ElectricDrain
+  m_EditorClassIdentifier: 
+  Image: {fileID: 21300000, guid: ea5ff01d475392c4eaa1a9694d1787a4, type: 3}
+  Origin: {fileID: 11400000}
+  AdditionalType: 2
+  Name: "\uC77C\uB809\uD2B8\uB9AD \uB4DC\uB808\uC778"
+  Description: "\uB4DC\uB808\uC778 \uC2DC, 1\uCD08\uB9C8\uB2E4 \uBC94\uC704 \uB0B4\uC758
+    \uC801\uC5D0\uAC8C 10\uC758 \uD53C\uD574\uB97C \uC785\uD788\uACE0, \uAC10\uC804
+    \uC0C1\uD0DC\uB85C \uB9CC\uB4ED\uB2C8\uB2E4."
+  _effect:
+    Effect: {fileID: 803257143062346791, guid: d4f71b203933e8f48953eda9a81d727c, type: 3}
+    Particle: {fileID: 5748501165939822106, guid: 81e55cbcebf93684f8d2f3731c5b5175, type: 3}
+    OriginEffect: {fileID: 0}
+  _electricShockOrigin: {fileID: 11400000, guid: 4091af5b30b615242a7cae894cd9a73b, type: 2}
+  _damage: 10

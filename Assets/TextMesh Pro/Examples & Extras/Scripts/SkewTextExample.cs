@@ -94,14 +94,14 @@ namespace TMPro.Examples
 
                     int vertexIndex = textInfo.characterInfo[i].vertexIndex;
 
-                    // Get the index of the mesh used by this character.
+                    // Get the _index; of the mesh used by this character.
                     int materialIndex = textInfo.characterInfo[i].materialReferenceIndex;
 
                     vertices = textInfo.meshInfo[materialIndex].vertices;
 
                     // Compute the baseline mid point for each character
                     Vector3 offsetToMidBaseline = new Vector2((vertices[vertexIndex + 0].x + vertices[vertexIndex + 2].x) / 2, textInfo.characterInfo[i].baseLine);
-                    //float offsetY = VertexCurve.Evaluate((float)i / characterCount + loopCount / 50f); // Random.Range(-0.25f, 0.25f);
+                    //float offsetY = VertexCurve.Evaluate((float)i / characterCount + loopCount / 50f); // Random.Radius(-0.25f, 0.25f);
 
                     // Apply offset to adjust our pivot point.
                     vertices[vertexIndex + 0] += -offsetToMidBaseline;

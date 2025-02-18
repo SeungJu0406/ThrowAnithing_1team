@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b876e941d9b523242a31c2c88d8b2d24, type: 3}
+  m_Name: Creation
+  m_EditorClassIdentifier: 
+  Image: {fileID: 21300000, guid: 56e3eafbb8aa86b40baa3991c0ea7fa6, type: 3}
+  Origin: {fileID: 11400000}
+  AdditionalType: 2
+  Name: "\uD06C\uB9AC\uC5D0\uC774\uC158"
+  Description: "\uD22C\uCC99\uBB3C \uD68D\uB4DD \uC2DC, \uC77C\uC815\uD655\uB960\uB85C
+    +1\uAC1C\uB97C \uBCF5\uC0AC\uD574 \uD68D\uB4DD\uD569\uB2C8\uB2E4."
+  _probability: 25

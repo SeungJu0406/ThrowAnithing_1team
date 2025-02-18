@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4135413752808915585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5395194750127859831}
+  - component: {fileID: 7615126992720756441}
+  m_Layer: 0
+  m_Name: LobbyUpGrade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5395194750127859831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4135413752808915585}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1004.65283, y: 521.50946, z: -16.344648}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7615126992720756441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4135413752808915585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb206f879bb479a4ab6a7d01c7ee72e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameData:
+    coin: 0
+    saveDateTime: 
+    upgradeLevels: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    upgradeCosts: e8030000e8030000e8030000e803000088130000881300008813000088130000102700001027000010270000102700003075000030750000307500003075000050c3000050c3000050c3000050c30000
+    usingCoin: 0
+    bringData: 1
+  playerState:
+    maxHp: 0
+    commonAttack: 0
+    shortRangeAttack:
+    - 0
+    - 0
+    - 0
+    longRangeAttack:
+    - 0
+    - 0
+    - 0
+    - 0
+    attackSpeed: 0
+    movementSpeed: 0
+    criticalChance: 0
+    defense: 0
+    equipmentDropUpgrade: 0
+    drainLife: 0
+    maxStamina: 0
+    regainStamina: 0
+    regainMana:
+    - 0
+    - 0
+    - 0
+    - 0
+    manaConsumption:
+    - 0
+    - 0
+    - 0
+    consumesStamina: 0
+    gainMoreThrowables: 0
+    maxThrowables: 0
+    nowWeapon: 0
+    maxMana: 0
+    maxJumpCount: 0
+    jumpPower: 0
+    jumpConsumesStamina: 0
+    doubleJumpConsumesStamina: 0
+    dashDistance: 0
+    dashConsumesStamina: 0
+    shortRangeAttackStamina:
+    - 0
+    - 0
+    - 0
+    specialAttack:
+    - 0
+    - 0
+    - 0

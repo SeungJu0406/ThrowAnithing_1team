@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c20cbe9f6bb504e9f81187110c1ddf, type: 3}
+  m_Name: DrainStamina
+  m_EditorClassIdentifier: 
+  Image: {fileID: 21300000, guid: 8023f273756539a44aa2634543c6d8de, type: 3}
+  Origin: {fileID: 11400000}
+  AdditionalType: 2
+  Name: "\uB4DC\uB808\uC778 \uD640\uB4DC"
+  Description: "\uB4DC\uB808\uC778\uC758 \uC18C\uBAA8 \uC2A4\uD0DC\uBBF8\uB098\uB7C9\uC774
+    50% \uC904\uC5B4\uB4ED\uB2C8\uB2E4."
+  _decreaseStamina: 50

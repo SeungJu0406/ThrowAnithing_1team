@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0355796e4cd565d4d85118ea8fde3d5d, type: 3}
+  m_Name: RichPower
+  m_EditorClassIdentifier: 
+  Image: {fileID: 21300000, guid: 6d7184fa036d5fd459e67ef7c2b4d76f, type: 3}
+  Origin: {fileID: 11400000}
+  AdditionalType: 2
+  Name: "\uBD80\uC775\uBD80"
+  Description: "\uAC00\uC9C0\uACE0 \uC788\uB294 \uD22C\uCC99\uBB3C\uB2F9 \uACF5\uACA9\uB825\uC774
+    0.5%\uC99D\uAC00\uD569\uB2C8\uB2E4"
+  _increaseDamage: 0.5

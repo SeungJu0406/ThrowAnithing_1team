@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c144afed751b1bc4296168b3698a001b, type: 3}
+  m_Name: Power Melee
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  _charges:
+  - ChargeTime: 0
+    Damage: 25
+    AttackRange: 1.5
+    AttackAngle: 150
+    KnockBackRange: 0
+    RushDistance: 0
+    Stamina: 0
+  - ChargeTime: 0.25
+    Damage: 40
+    AttackRange: 2
+    AttackAngle: 150
+    KnockBackRange: 3
+    RushDistance: 0
+    Stamina: 0
+  - ChargeTime: 0.5
+    Damage: 60
+    AttackRange: 2.5
+    AttackAngle: 150
+    KnockBackRange: 5
+    RushDistance: 2
+    Stamina: 0
+  _effects:
+    Charges:
+    - Charge: {fileID: 2666987530771428612, guid: fdbcf892c078f02419f088aa26cf0ad0, type: 3}
+      Attack: {fileID: 3315180347512180588, guid: 30de2680f0523d74ebfec142875baeec, type: 3}
+    - Charge: {fileID: 3131504231603907193, guid: 458f672a4ae3722469045b45217874ee, type: 3}
+      Attack: {fileID: 3617898192046207779, guid: 32872e0b4a81bf246b3544ce2b789fd6, type: 3}
+    - Charge: {fileID: 6968367475162185451, guid: 05f723dce21b48d44b79cba893682fa7, type: 3}
+      Attack: {fileID: 4081722726488137822, guid: 89a4cd3ec031e5948b97b4ded2117ef3, type: 3}
+    Full: {fileID: 2814029843322883771, guid: 2d15236ccce37c64e82031c10bb8721f, type: 3}
+  RushSpeed: 15
+  _moveSpeedMultyPlier: 0.3
+  _autoAttackDelay: 1
