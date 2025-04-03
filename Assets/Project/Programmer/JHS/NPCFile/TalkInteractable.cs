@@ -57,34 +57,17 @@ public class TalkInteractable : MonoBehaviour
         {
             if (isPlayerNearby)
             {
-                if (itemPrefab != null && sponPoint != null && !isItemSpon)
+                if (dialogueUI.activeSelf)
                 {
-                    if (dialogueUI.activeSelf)
-                    {
-                        // 대화창이 열려있으면 대화 스킵
-                        HandleDialogueProgress();
-                    }
-                    else
-                    {
-                        // 대화창이 닫혀있으면 대화창으로 열고 대화 시작
-                        ShowDialogueUI();
-                        StartDialogue();
-                    }
+                    // 대화창이 열려있으면 대화 스킵
+                    HandleDialogueProgress();
                 }
-                else if (itemPrefab == null && sponPoint == null)
+                else
                 {
-                    if (dialogueUI.activeSelf)
-                    {
-                        // 대화창이 열려있으면 대화 스킵
-                        HandleDialogueProgress();
-                    }
-                    else
-                    {
-                        // 대화창이 닫혀있으면 대화창으로 열고 대화 시작
-                        ShowDialogueUI();
-                        StartDialogue();
-                    }
-                }               
+                    // 대화창이 닫혀있으면 대화창으로 열고 대화 시작
+                    ShowDialogueUI();
+                    StartDialogue();
+                }
             }
         }        
     }

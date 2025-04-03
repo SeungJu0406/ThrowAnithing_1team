@@ -8,7 +8,7 @@ public class ButtonActionInstaller : MonoBehaviour
 {
 
     // OptionSave()
-    [SerializeField] public Button saveButton;
+    [SerializeField] private Button saveButton;
     // OptionLode()
     [SerializeField] public Button cancelButton;
     // OptionReset()

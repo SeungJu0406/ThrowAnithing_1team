@@ -90,10 +90,12 @@ MonoBehaviour:
     Data:
       Hp:
         MaxHp: 0
+        MaxHpMultiplier: 0
         CurHp: 0
       Attack:
         AttackPower: 0
         AttackPowerMultiplier: 0
+        DamageMultiplier: 0
         AttackSpeed: 0
         AttackSpeedMultiplier: 0
         PowerMeleeAttack: []
@@ -111,8 +113,10 @@ MonoBehaviour:
         RegainStamina: 0
         StaminaCoolTime: 0
         ConsumesStamina: 0
+        StaminaReduction: 0
         MaxStaminaCharge: 0
         CurStaminaCharge: 0
+        MeleeAttackStamina: []
       Special:
         MaxMana: 0
         CurMana: 0
@@ -120,6 +124,9 @@ MonoBehaviour:
         RegainAdditiveMana: 0
         ManaConsumption: []
         SpecialChargeGage: 0
+      Move:
+        MoveSpeed: 0
+        MoveSpeedMultyplier: 0
       Dash:
         DashDistance: 0
         DashStamina: 0
@@ -141,9 +148,7 @@ MonoBehaviour:
         HitAdditionals: []
         ThrowAdditionals: []
         PlayerAdditionals: []
-      MoveSpeed: 0
       DrainLife: 0
-      MeleeAttackStamina: []
       EquipmentDropUpgrade: 0
     IsDead: 0
     Inventory:
@@ -151,6 +156,11 @@ MonoBehaviour:
       InventoryMain: {fileID: 0}
       BlueChipChoice: {fileID: 0}
       BlueChipPanel: {fileID: 0}
+      BlueChipChoicePanel: {fileID: 0}
+      BlueChipChoiceController: {fileID: 0}
+      ChoicePanel: {fileID: 0}
+      PcText: {fileID: 0}
+      ConsloeText: {fileID: 0}
     test: 1
   userDataManager: {fileID: 2843022970376083190}
   globalPlayerStateData:
@@ -348,10 +358,12 @@ MonoBehaviour:
     Data:
       Hp:
         MaxHp: 0
+        MaxHpMultiplier: 0
         CurHp: 0
       Attack:
         AttackPower: 0
         AttackPowerMultiplier: 0
+        DamageMultiplier: 0
         AttackSpeed: 0
         AttackSpeedMultiplier: 0
         PowerMeleeAttack: []
@@ -369,8 +381,10 @@ MonoBehaviour:
         RegainStamina: 0
         StaminaCoolTime: 0
         ConsumesStamina: 0
+        StaminaReduction: 0
         MaxStaminaCharge: 0
         CurStaminaCharge: 0
+        MeleeAttackStamina: []
       Special:
         MaxMana: 0
         CurMana: 0
@@ -378,6 +392,9 @@ MonoBehaviour:
         RegainAdditiveMana: 0
         ManaConsumption: []
         SpecialChargeGage: 0
+      Move:
+        MoveSpeed: 0
+        MoveSpeedMultyplier: 0
       Dash:
         DashDistance: 0
         DashStamina: 0
@@ -399,9 +416,7 @@ MonoBehaviour:
         HitAdditionals: []
         ThrowAdditionals: []
         PlayerAdditionals: []
-      MoveSpeed: 0
       DrainLife: 0
-      MeleeAttackStamina: []
       EquipmentDropUpgrade: 0
     IsDead: 0
     Inventory:
@@ -409,6 +424,11 @@ MonoBehaviour:
       InventoryMain: {fileID: 0}
       BlueChipChoice: {fileID: 0}
       BlueChipPanel: {fileID: 0}
+      BlueChipChoicePanel: {fileID: 0}
+      BlueChipChoiceController: {fileID: 0}
+      ChoicePanel: {fileID: 0}
+      PcText: {fileID: 0}
+      ConsloeText: {fileID: 0}
     test: 
   saveSystem: {fileID: 0}
   coinText: {fileID: 0}
@@ -429,8 +449,9 @@ MonoBehaviour:
   effectSound: 0
   backgroundSound: 0
   wholesound: 0
-  cameraSpeed: 0.1
+  cameraSpeed: 0.01
   miniMapOnBool: 0
   miniMapOn: 0
   miniMapFixBool: 0
   miniMapFix: 0
+  language: 0
